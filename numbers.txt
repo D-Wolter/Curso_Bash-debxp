@@ -1,0 +1,114 @@
+Trabalhando com numeros
+
+declare -i v1 -declarando variavel v1 inteiro
+declare -i v2
+declare -i v3
+declare -i v4
+
+v1=12
+v2=54
+v3=$v1+$v2
+
+echo $v3 -66
+
+v4=$v1 + 100
+echo $v4 =112
+
+v4=33+44 
+echo $v4 - 77
+
+----------------------------------
+
+let pode usar comparações
+
+let valor=19
+echo $valor -19
+
+let valor+=13
+echo $valor -32
+
+let valor=$valor+13
+echo $valor -58
+
+let valor=valor+13
+echo $valor 71
+
+------------------------
+
+Operadores de igual precedencia, os niveis estao em ordem de precedencia decrescente
+id++, id-- -posacressimo e pos decremento
+++id, --id -pre acressimo pre decremento
+-, + -menos e mais unarios (vao antes do atributo)
+!, ~ -negação logica , bit a bit
+** -exponenciação
+*,/,% -multiplicação, divisao, resto de divisao
++, - -adiçao subtraçao
+<<,>> -deslocamento bit a bit para esquerda, direita
+<=, >=,<,> comparações
+==, != igualdade, desigualdade
+& - E (And) bit a bit
+^ ou esclusivo (xor) bit a bit
+| ou (or) bit a bit
+&& E logico
+|| Ou logico
+expr ? expr : expr -funcao ternaria
+=, *=,/=, %= 
++=, -=, <<=, >>=
+&=, ^=. |=
+
+As variaveis no shell sao permitidos como operandos o nome da variavel é substituida
+pelo seu valor(coagida a um inteiro com largura fixa) dentro de uma expressao
+A variavel nao precisa ter seu atributo de inteiro ligado para ser usada em uma expressao
+
+operadores sao avaliados em ordem de precedencia sub-expressoes em parenteses sao avaliados
+primeiro e podem sobreescrever as regras de precedencia acima.
+
+
+Fazendo Operaçoes
+
+1º forma
+13*2
+
+'let "13*2"'  -let
+
+'((13*2))'   -comando composto
+
+'$((13*2)) -expansao artimetica
+
+'declare -i var="13*2"'  declarando atributo type
+
+-----------------------------------------------------
+2º forma 
+12 + 34 * 3 + (15/3) = 119
+
+'let "12+34*3+(15/3)"'
+
+'((12+34*3+(15/3)))'
+
+'$((12+34*3+(15/3)))'
+
+declare -i var="12+34*3+(15/3"')
+
+-------------------------------------------------
+3º forma
+
+read -p "sua expressao: nomevar
+[[${#nomevar} -lt 1]] && exit
+let calc="$nomevar"
+echo " 'let \"$nomevar\"'
+calc=$(($nomevar))
+declare -i calc="$nomevar"
+exit
+
+-------------------------
+valor+=3 -13
+valor=$valor-3 -10
+valor=$valor*3 -30
+valor=$valor/3 -10
+valor=$valor+1 -10
+valor=valor%3 -1
+
+soluçao para o operador ++
+valor=$valor+1
+
+valor=$valor-1
