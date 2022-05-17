@@ -1,0 +1,67 @@
+$nome ou ${nome} //expande valor do nome
+${nome[indice]} //expande valor nome indice
+${nome[@|*]} //expande valores todos elementos do array
+${!nome[@|*]} //expande indices de elementos em nome
+${#nome[@|*]} //expande para o numero de elementos em nome
+
+
+mkdir teste{1..4} //cria pastas teste de 1 a4 - teste1 teste2 teste3 teste4
+
+
+ifs=$'\n' //criando separdores de campo personalizado
+
+
+${nome:-valor_padrao} //expande valor_padrao se 'nome' não existe ou é nulo
+${nome:=valor_padrao} //expande valor_padao se 'nome' não existe e atribui valor_padrao a 'nome'
+${nome:+valor} //expande p valor, se 'nome' existe ou nada de nome não existe
+
+
+alunos=(joao maria 'daniel wolter')
+echo ${alunos[@]} //jao maria daniel wolter
+echo ${alunos[2]} //daniel wolter
+echo ${!alunos[@]} //0 1 2  -index
+echo ${#alunos[2]} //3 len
+
+fruta=banana
+echo ${fruta} //banana
+echo ${#fruta} //6 -string len
+
+ms=1234567890abcdefghij
+echo ${#ms} //20 -len
+echo ${ms:7} //890abcdefghij  apagou ate 7
+echo ${ms:-7} //defghij -retorna os ultimos 7
+echo ${ms:5:3} //678 -a partir de cinco trez casas
+echo ${ms:5:-3} //67890abcdeg -a partir de cinco removendo 3 ultimos
+echo ${ms:-10} //abcdefhgij - exibe ultimos dez
+echo ${ms:-10:3} //abc - tres primeiros dos ultimos dez
+echo ${ms:-10:-3} //abcdefg -retorna os ultimos 10 e apaga os ultimos 3
+
+download="https://teste.com/exemplo/arquivo.zip"
+echo ${download##*/} // arquivo zip - extrai nome link
+
+--------------------
+
+$ {variavel/padrao/string} //substitui a primeira ocorrencia de 'padrao' por 'string'
+${variavel//padrao/string} //subtitui todas as ocorrencia de 'padrao' por 'string'
+
+mensagem="Use Windows e seja feliz!"
+echo ${mensagem/Windows/Linux} //Use Linux e seja Feliz! 
+
+echo ${mensagem/F*/Wolter} //Use Linux e seja muito Wolter
+
+-----------------------
+Script- name= test-for
+-----------------
+
+for argumento; do
+    echo $argumento
+done
+
+exit 
+---------------------
+
+./test_for Daniel Tiago Luana, Gabriel
+//Daniel
+//Tiago
+//Luana
+//Gabriel

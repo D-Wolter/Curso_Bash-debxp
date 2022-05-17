@@ -1,7 +1,7 @@
 Adicionar Script ao path
 
 1º criar pasta bin na home 
-mkdir ~/bin -pode ser outro nome e local
+mkdir ~/bin //pode ser outro nome e local
 
 2º copia novo script para pasta criada
 cp ../caminho/novo_script ~/bin
@@ -11,10 +11,12 @@ path=$path:~/bin
 
 4º edita o bashrc
 nano ~/.bashrc
+
 escreve no fim 
 export path=$path:~/bin
-cntrl + s -salva
-cntrl + x -fecha
 
-echo $path - exibe a lista de path atualizada
+cntrl + s //salva
+cntrl + x //fecha
+
+echo $path //exibe a lista de path atualizada
 

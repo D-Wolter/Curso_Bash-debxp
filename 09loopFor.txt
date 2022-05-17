@@ -1,0 +1,55 @@
+Loop for
+executa uma sequencia de comandos para cada elemento de uma lista de Arrays
+----------
+for nome [in lista];do
+    comandos; done
+
+-------------
+for nome [in lista]; do comando; done
+-------------
+for produto in leite cafe pao açucar; do echo ${produto; done}
+----------------------
+compras="papel tesoura cola lapiz"
+
+for produto in $compras; do echo $produto; done
+---------------------
+
+
+---------------------------
+Script name=cont
+-------------------
+for ((n=1;<=10;n++));do
+    echo $n
+done
+------------------
+./cont //12345678910
+
+---------------
+for (n=1;<=10;n+2){
+    echo $n
+}
+//13579
+-------------------
+for n in {0..10}; do
+    echo $n
+done
+//1 2 3 4 5 6 7 8 9 10
+------------------
+for n in {1..10..2}; do
+    echo $n 
+done
+//13579
+-----------------
+for n in {0..9}{0..9}; do
+    echo $n 
+done
+//01 02 04 04 ........97 98 99
+-----------------
+alunos=(joao maria "jose martins")
+for i in ${!alunos[@]}; do
+    echo "aluno $i --> ${alunos[$i]}
+done
+//aluno 0 --> joao
+//aluno 1 --> maria
+//aluno 2 --> jose martins
+--------------

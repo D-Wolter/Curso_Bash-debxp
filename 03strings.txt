@@ -1,0 +1,14 @@
+
+concatenaçao strings
+
+nome="Maria"
+sobrenome="Silva"
+echo $nome $sobrenome
+
+full_name="$nome $sobrenome"
+
+full_name="$nome               $sobrenome" 
+//bash nao interpreta mais de um espaço entre cada palavra
+
+echo $full_name //Maria Silva
+

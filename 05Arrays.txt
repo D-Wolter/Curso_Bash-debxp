@@ -1,6 +1,6 @@
 
 fruta=("banana""abacate""limao""maça")
-echo ${fruta[2]} -maça
+echo ${fruta[2]} //maça
 
 nome="manoel"
 echo "${nome} Bem Vindo"
@@ -8,13 +8,13 @@ echo "${nome} Bem Vindo"
 aluno[23]="antonio"
 aluno[12]="renata"
 aluno[99]="luana"
-echo ${#fruta[@]} -len fruta
-echo ${aluno[*]} -exibe todos elementos alunos 
-echo ${aluno[@]} -exibe todos elementos alunos 
+echo ${#fruta[@]} //len fruta
+echo ${aluno[*]} //exibe todos elementos alunos 
+echo ${aluno[@]} //exibe todos elementos alunos 
 
-echo ${fruta[@]} -banana abacate limao maça
-echo ${!fruta[@]} - 0 1 2 3
-echo ${!alunos[@]} - 1 12 23 99
+echo ${fruta[@]} //banana abacate limao maça
+echo ${!fruta[@]} //0 1 2 3
+echo ${!alunos[@]} //1 12 23 99
 
 ------------------------------------------
 Arrays assosiativas
@@ -28,9 +28,9 @@ echo ${carro[vw]}
 echo ${carro[fiat]}
 echo ${carro[ford]}
 
-echo ${#carro[@]} - 3
-echo ${carro[@]} - 147 fusca ranger
-echo ${!carro[@]} - fiat vw ford
+echo ${#carro[@]} //3
+echo ${carro[@]} //147 fusca ranger
+echo ${!carro[@]} //fiat vw ford
 
 --------------------------------------------
 
@@ -52,5 +52,8 @@ nota[fernando]=6
 nota[daniel]=10
 nota[tiago]=9
 
-echo {!aluno[*]} -jose joao maria fernando daniel tiago
-echo {aluno[*]} - jose barbosa Joao Batista Maria Joana Fernando AGivota Daniel Wolter tiago Martins
+echo {!aluno[*]} //jose joao maria fernando daniel tiago
+echo {aluno[*]} //jose barbosa Joao Batista Maria Joana Fernando AGivota Daniel Wolter tiago Martins
+
+----------------------------------
+

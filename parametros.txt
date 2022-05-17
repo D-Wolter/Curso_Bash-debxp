@@ -1,6 +1,0 @@
-$nome ou ${nome} - expande valor do nome
-${nome[indice]} -expande valor nome indice
-${nome[@|*]} -expande valores todos elementos do array
-${!nome[@|*]} -expande indices de elementos em nome
-${#nome[@|*]} -expande para o numero de elementos em nome
-

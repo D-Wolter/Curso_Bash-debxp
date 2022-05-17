@@ -1,0 +1,107 @@
+Não se pergunta se algo da pra fzer no shell, 
+a questão é como fazer no shell!
+
+
+Existe Varios tipos de shell.
+
+cat /etc/shells _lista os shells validos
+
+
+* sh       _bourne shell
+* bash     _bourne again shell
+* rbash    _restricted bash
+* dash     _shell padrão do DSB
+* zsh     _(z-shell) zero shell
+* fish    _friendly interactive shell
+
+Comandos Básicos
+
+pwd _mostra pasta atual
+
+ls _mostra itens da pasta
+
+cd nomepasta _entra na pasta
+
+cd/ _vai para raiz do sistema
+
+mkdir nomepasta _cria pasta
+
+rmdir nomepasta _remove diretorio se vazio
+
+help _lista comandos builtin
+
+help comandoBuiltin _esreve help e o nome do comandoBuiltin
+
+ls -la  _mostra todos itens inclusive os .ocultos
+
+ls .bash* _lista tudo que começa com bash
+
+var="banana"
+echo $var  _exibe var
+
+echo $0 _indica onde esta sendo executado
+
+> nome  _cria arquivo
+
+chmod +x pasta  _transforma em exec -> script (cor verde)
+
+nano pasta  _abre arquivo no nano editor
+cntrl + s _salva
+cntrl + x  _exit
+#!/caminho  _primeira linha indicamos caminho do interpretador
+
+(depois de abrir o arquivo script no edito a primeira linha indica o interpretador.)
+#!/usr/bin/env bash
+
+./nomeScript _dentro do diretorio chamando exec
+
+nano .bash_profile _abre janela onde indicamos o caminho para ficar disponivel junto aos paths
+padrao, par inicializar sempre.
+(dentro da janela) path=$path:~/bin _incluido pasta bin
+
+rm arquivo  _deletar arquivo
+
+.nomearquivo  _arquivos .ocultos
+
+meu_script.sh  _extenção só serve p organizar o que vale é instrução 
+na primeira linha do script
+
+> laranja;chmod +x laranja  _criando arquivo e tornando exec
+
+ls -l -mostra detalhes do aqquivo _rwxr-xr-x 1 gda gda 0 out 3 20.17 laranja
+
+./laranja  //executa script(se includo no path chama direto. laranja)
+
+comando > arquivo //insere comando dentro do arquivo
+echo "echo ola mundo">laranja
+
+rw _permisao de ler e escrever
+x _aciona como exec
+chmod a+x //adiciona exec qualquer user
+chmod u+x //adiciona apenas user atual
+chmod +x //adicona exec
+
+
+
+(infos)
+#!/usr/bin/env bash
+whoami //username
+hostname
+uptime //padraouname-rms
+
+ls -l = //rw-r--r-- 1 gda gda 58 out 3 20.37 infos
+./infos //permissao negada
+
+chmod +x infos //adicionando flag exec
+ls - l //rwxr-xr-x 1 gda gda 58 out 3 20.37 infos
+
+chmod //x_tirando flag exec
+
+chmod u+x infos //adicionar flag exec apenas para user 
+
+test-x infos
+echo $? //se retornar verdadeiro o camando anterior foi bem sucedid se retorna outro
+é porque nao é exec
+
+[ -x infos]; echo $?
+[[ -x infos]]; echo

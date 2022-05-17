@@ -1,0 +1,47 @@
+Tipos de expançoes
+
+expanção caminhos
+expanção de nomes de arquivo
+expanção de chaves
+expanção de palavras
+expanção de aspas
+expanção especiais
+expanção artimeticas
+substituiçoes de comandos
+substituiçoes de processos
+expançao parametros
+
+ls *.txt //listar qualquer arquivo exrenço txt
+
+~ //caminho
+echo aula{1..5} //cria pastas dentro da faixa de 1 a 5 aula1 aula2 aula3 aula4 aula5
+
+echo $((2+2)) //4
+
+echo $(whoami) //mostra o resultado do comandos
+
+echo ${fruta^^} //mostra conteudo string Maiuscula
+
+echo * //mostra todas variaveis e arquivos
+
+echo *.??? //exibe todos arquivos com tres digitos de extençao
+
+echo a[b]* //exibe arquivo que começa com a e tem segunda letra b seguido de qualquer coisa
+
+echo a[cb]* //exibe arquivo que começa com a, com segunda letra c ou b (uma ou outra ou as duas)
+
+echo ???[ma]* //exibe qiualquer arquivo que tenha trez letras e a seguir um m ou a, seguido de qualquer coisa
+
+echo *.???? // exibe arquivos de qualquer nome com extençoes de 4 digitos
+
+~ //pasta usuario
+
+cd - //ultima pasta visitada
+
+---------------------------------
+
+alunos=(joao maria "daniel wolter")
+for aluno in "${alunos[@]}"; do
+echo $aluno
+done
+

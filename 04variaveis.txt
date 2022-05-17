@@ -54,26 +54,30 @@ help export
 man env
 
 
-Variaveis Inalteraveis -sao contantes apenas para leitura read-only, so poder ser modificadas encerrando o shell
+Variaveis Inalteraveis (sao contantes apenas para leitura read-only, 
+só poder ser modificadas encerrando o shell
+
 fauna="leao" 
-echo $fauna - leao
-readonly fauna -tornando somente leitura
-fauna="onça" -erro variavel apenas para leitura
-unset: fauna: -erro apenas leitura impossivel remover
+echo $fauna _leao
+readonly fauna _tornando somente leitura
+fauna="onça" _erro variavel apenas para leitura
+unset: fauna: _erro apenas leitura impossivel remover
 
 Atribuir saida comando a variavel
+
 usuario=$(whoami)
 echo @usuario
 -------------------------------------------
 INPUT
+
 read -p "qual seu nome? usuario 
 mensagem="seja muito bem vndo dr $usuario"
 echo $mensagem
-echo $$ -exibe PID do script
-exit0 - saida sem erro
+echo $$ // exibe PID do script
+exit0 //saida sem erro
 
 sudo apt update && sudo apt upgrade - so executa segunda a açao se tiver sucesso pa primeirqa
-test 5 -eq 5 && echo"sucesso" - so exibe mensagem sucesso se verdadeiro o teste
+test 5 -eq 5 && echo"sucesso" //so exibe mensagem sucesso se verdadeiro o teste
 
-test 2 -eq 5 && echo"sucesso" || echo "erro" -exibe sucesso se true e erro se false
+test 2 -eq 5 && echo"sucesso" || echo "erro" //exibe sucesso se true e erro se false
 

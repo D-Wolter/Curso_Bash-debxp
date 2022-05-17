@@ -1,0 +1,23 @@
+Loop for
+
+for nome [in lista]; do
+    comandos
+done
+------------
+Loop While -> Enquanto
+
+while condição; do
+    comandos
+done
+-----------
+Loop until -> até que seja verdadeiro
+
+until condição; do
+    comandos
+done
+-----------
+Loop select
+
+select nome [in lista]; do
+    comandos
+done

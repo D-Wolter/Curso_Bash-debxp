@@ -79,7 +79,7 @@ Fazendo Operaçoes
 
 -----------------------------------------------------
 2º forma 
-12 + 34 * 3 + (15/3) = 119
+//12 + 34 * 3 + (15/3) = 119
 
 'let "12+34*3+(15/3)"'
 
@@ -101,12 +101,12 @@ declare -i calc="$nomevar"
 exit
 
 -------------------------
-valor+=3 -13
-valor=$valor-3 -10
-valor=$valor*3 -30
-valor=$valor/3 -10
-valor=$valor+1 -10
-valor=valor%3 -1
+valor+=3 //13
+valor=$valor-3 //10
+valor=$valor*3 //30
+valor=$valor/3 //10
+valor=$valor+1 //10
+valor=valor%3 //1
 
 soluçao para o operador ++
 valor=$valor+1
