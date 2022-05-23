@@ -21,3 +21,5 @@ Loop select
 select nome [in lista]; do
     comandos
 done
+
+ok
